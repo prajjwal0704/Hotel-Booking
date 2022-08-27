@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Room_Booking</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Room_Booking.styles.css" asp-append-version="true" />
+    @RenderSection("css", false)
+</head>
+<body>
+    <header class="header_area" style="background-color: white;">
+        <div class="header_bottom">
+            <div class="container">
+                <div class="main_header">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-2">
+                            <div class="logo">
+                                <a asp-controller="Home" asp-action="Index"><img src="~/img/logo1.png" alt="Site Logo"></a>                     
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-10 nav_area">
+                            <nav class="main_menu">
+                                <div class="navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a asp-controller="" asp-action="">About Us</a></li>
+                                        <li><a asp-controller="" asp-action="">Services</a></li>
+                                        <li><a asp-controller="" asp-action="">Gallery</a></li>
+                                        <li><a asp-controller="Auth" asp-action="Index">SignUp/Login</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Room_Booking - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
